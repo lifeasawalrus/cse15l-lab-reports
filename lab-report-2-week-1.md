@@ -4,26 +4,48 @@
 ![Image](Lab1-part3-CSE15L.png)
 
 
-2. At this point you are ready to connect to the secure shell. To connect, use the following command promt: `ssh cs15lfa22zz@ieng6.ucsd.edu`
+2. After opening vscode, go to the "Terminal" drop down menu and select "New Terminal". This should open a terminal window in vscode. To connect to the remote server, use the following command: `ssh cs15lfa22zz@ieng6.ucsd.edu`
 
 (Be sure to replace "zz" with your respective account's initials)
 Enter your password to gain access. 
 
 ![Image](Lab1-part4-CSE15.png)
-_At this point, I was unable to connect because the password change is not functioning for my account. Although I was able to change the password, the server was unable to recognize the new password. See below._
-
-![Image](Failed-login.png)
 
 
-3. Made it this far? Well done! Try out some basic commands. (Examples below).
+3. Trying basic terminal commands:
+
+    In the image below, we see some examples.
+
+    a)  `pwd` shows the absolute directory path you are currently inhabiting.
+
+    b) `ls` shows folders and files in your current directory (folders are in blue )
+
+    c) `ls -a` shows *all* folders and files, including hidden ones!
+
+    d) `cd` followed by a folder name, will change your directory and move you into the named folder.
+
+    e) `.` and `..` represent the *current* and *previous* (the directory one step above in the heiarchy) directories respectively.
 ![Image](Lab1-part5-CSE15L.png)
 
-4. You may now use the secure copy to send files to, and from, the server. Log out and use the following command-line prompt to send a file to the server. `scp WhereAmI.java cs15lfa22zz@ieng6.ucsd.edu:file_directory`
+4. You may now use the secure copy to send files to, and from, the server. Log out and use the following command-line prompt to send a file to the server. `scp WhereAmI.java cs15lfa22al@ieng6.ucsd.edu:/home/linux/ieng6/cs15lfa22/cs15lfa22al/lab1` (Be sure to replace "al" with your account's initials! Be sure that WhereAmI.java is in the current path you are in on your local machine).
+
+**WhereAmI.java contents:**
+
+```
+class WhereAmI {
+     public static void main(String[] args) {
+       System.out.println(System.getProperty("os.name"));
+       System.out.println(System.getProperty("user.name"));
+       System.out.println(System.getProperty("user.home"));
+       System.out.println(System.getProperty("user.dir"));
+     }
+   }
+
+```
 
 _Note that scp is followed by the file to be copied, then the account info followed by a colon and the directory._
 
-![Image](Lab1-part6-1-CSE15L.png)
-![Image](Lab1-part6-2-CSE15L.png)
-![Image](Lab1-part6-3-CSE15L.png)
+   Now, compile and run the code!
 
-**At this point, time ran short in the lab and I was unable to complete all learning points. I was unable to get a working password change no matter how many times I attempted to follow the tutorial *See above***
+   ![Image](Lab1-part6-CSE15L.png)
+
