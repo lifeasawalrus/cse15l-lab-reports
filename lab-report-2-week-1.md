@@ -15,17 +15,17 @@ Enter your password to gain access.
 
 Step 3: Trying basic terminal commands:
 
-    In the image below, we see some examples.
+  In the image below, we see some examples.
 
-    a)  `pwd` shows the absolute directory path you are currently inhabiting.
+  a)  `pwd` shows the absolute directory path you are currently inhabiting.
 
-    b) `ls` shows folders and files in your current directory (folders are in blue )
+  b) `ls` shows folders and files in your current directory (folders are in blue )
 
-    c) `ls -a` shows *all* folders and files, including hidden ones!
+  c) `ls -a` shows *all* folders and files, including hidden ones!
 
-    d) `cd` followed by a folder name, will change your directory and move you into the named folder.
+  d) `cd` followed by a folder name, will change your directory and move you into the named folder.
 
-    e) `.` and `..` represent the *current* and *previous* (the directory one step above in the heiarchy) directories respectively.
+  e) `.` and `..` represent the *current* and *previous* (the directory one step above in the heiarchy) directories respectively.
 ![Image](Lab1-part5-CSE15L.png)
 
 Step 4: You may now use the secure copy to send files to, and from, the server. Log out and use the following command-line prompt to send a file to the server. `scp WhereAmI.java cs15lfa22al@ieng6.ucsd.edu:/home/linux/ieng6/cs15lfa22/cs15lfa22al/lab1` (Be sure to replace "al" with your account's initials! Be sure that WhereAmI.java is in the current path you are in on your local machine).
@@ -52,15 +52,14 @@ _Note that scp is followed by the file to be copied, then the account info follo
 
 Step 5: We are ready to generate an ssh key. This will allow us to call `scp` or `ssh` without having to input the profile password each time.
 
-    `ssh-keygen` will create a public and private key on your computer. Just press Enter when given the prompt below to send it to the *default* path. Press Enter two more times to ensure no password, and allow the decryption of the key to process authentication.
+ `ssh-keygen` will create a public and private key on your computer  Just press Enter when given the prompt below to send it to the *default* path. Press Enter two more times to ensure no password, and allow the decryption of the key to process authentication.
 
-    Now you will need to secure copy the *public* key to the server. On the server, make a directory: `mkdir ~/.ssh/`. Then on the client side, run this command with your respective local path and server username: `scp /home/stgermain/.ssh/id_rsa.pub cs15lfa22al@ieng6.ucsd.edu`.
-    Now you should be able to login to the server without a password!
-
+  Now you will need to secure copy the *public* key to the server. On the server, make a directory: `mkdir ~/.ssh/`. Then on the client side, run this command with your respective local path and server username: `scp /home/stgermain/.ssh/id_rsa.pub cs15lfa22al@ieng6.ucsd.edu`.
+  Now you should be able to login to the server without a password!
     ![Image](Lab1-part7-CSE15L.png)
 
 Step 6: Now that we don't need a password to `ssh` or `scp` we can make things even easier by doing just about everything we have covered so far in a single terminal command, by delineating the commands with ";". (Note that commands that will be run on the server are wrapped in quotation marks).
 
-        For example, let's secure copy WhereAmI.java to the server, compile it, and run it, all in one command, and all from our local machine!
+  For example, let's secure copy WhereAmI.java to the server, compile it, and run it, all in one command, and all from our local machine!
 
-        ![Image](Lab1-part8-CSE15L.png)
+   ![Image](Lab1-part8-CSE15L.png)
