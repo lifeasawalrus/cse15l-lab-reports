@@ -49,3 +49,11 @@ _Note that scp is followed by the file to be copied, then the account info follo
 
    ![Image](Lab1-part6-CSE15L.png)
 
+5. We are ready to generate an ssh key. This will allow us to call `scp` or `ssh` without having to input the profile password each time.
+
+    `ssh-keygen` will create a public and private key on your computer. Just press Enter when given the prompt below to send it to the *default* path. Press Enter two more times to ensure no password, and allow the decryption of the key to process authentication.
+
+    Now you will need to secure copy the *public* key to the server. On the server, make a directory: `mkdir ~/.ssh/`. Then on the client side, run this command with your respective local path and server username: `scp /home/stgermain/.ssh/id_rsa.pub cs15lfa22al@ieng6.ucsd.edu`.
+    Now you should be able to login to the server without a password!
+
+    ![Image](ssh_keygen.png)
