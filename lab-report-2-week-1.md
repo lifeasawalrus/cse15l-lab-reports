@@ -56,4 +56,10 @@ _Note that scp is followed by the file to be copied, then the account info follo
     Now you will need to secure copy the *public* key to the server. On the server, make a directory: `mkdir ~/.ssh/`. Then on the client side, run this command with your respective local path and server username: `scp /home/stgermain/.ssh/id_rsa.pub cs15lfa22al@ieng6.ucsd.edu`.
     Now you should be able to login to the server without a password!
 
-    ![Image](ssh_keygen.png)
+    ![Image](Lab1-part7-CSE15L.png)
+
+    6. Now that we don't need a password to `ssh` or `scp` we can make things even easier by doing just about everything we have covered so far in a single terminal command, by delineating the commands with ";". 
+
+        For example, let's secure copy WhereAmI.java to the server, compile it, and run it, all in one command, and all from our local machine!
+
+        ![Image](Lab1-part8-CSE15L.png)
