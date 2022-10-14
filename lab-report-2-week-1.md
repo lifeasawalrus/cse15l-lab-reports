@@ -58,7 +58,7 @@ _Note that scp is followed by the file to be copied, then the account info follo
 
     ![Image](Lab1-part7-CSE15L.png)
 
-    6. Now that we don't need a password to `ssh` or `scp` we can make things even easier by doing just about everything we have covered so far in a single terminal command, by delineating the commands with ";". 
+6. Now that we don't need a password to `ssh` or `scp` we can make things even easier by doing just about everything we have covered so far in a single terminal command, by delineating the commands with ";". 
 
         For example, let's secure copy WhereAmI.java to the server, compile it, and run it, all in one command, and all from our local machine!
 
