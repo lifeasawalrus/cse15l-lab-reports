@@ -1,10 +1,11 @@
 # How to log in to ssh
-**Disclaimer: Some images were taken from use of a TA account, issues with accessing the secure shell with my personal account are documented below.**
-1. First we will need the IDE for the course. Follow this [link](https://code.visualstudio.com/Download) to download VSCode for your machine.
+
+
+Step 1: First we will need the IDE for the course. Follow this [link](https://code.visualstudio.com/Download) to download VSCode for your machine.
 ![Image](Lab1-part3-CSE15L.png)
 
 
-2. After opening vscode, go to the "Terminal" drop down menu and select "New Terminal". This should open a terminal window in vscode. To connect to the remote server, use the following command: `ssh cs15lfa22zz@ieng6.ucsd.edu`
+Step 2: After opening vscode, go to the "Terminal" drop down menu and select "New Terminal". This should open a terminal window in vscode. To connect to the remote server, use the following command: `ssh cs15lfa22zz@ieng6.ucsd.edu`
 
 (Be sure to replace "zz" with your respective account's initials)
 Enter your password to gain access. 
@@ -12,7 +13,7 @@ Enter your password to gain access.
 ![Image](Lab1-part4-CSE15.png)
 
 
-3. Trying basic terminal commands:
+Step 3: Trying basic terminal commands:
 
     In the image below, we see some examples.
 
@@ -27,7 +28,7 @@ Enter your password to gain access.
     e) `.` and `..` represent the *current* and *previous* (the directory one step above in the heiarchy) directories respectively.
 ![Image](Lab1-part5-CSE15L.png)
 
-4. You may now use the secure copy to send files to, and from, the server. Log out and use the following command-line prompt to send a file to the server. `scp WhereAmI.java cs15lfa22al@ieng6.ucsd.edu:/home/linux/ieng6/cs15lfa22/cs15lfa22al/lab1` (Be sure to replace "al" with your account's initials! Be sure that WhereAmI.java is in the current path you are in on your local machine).
+Step 4: You may now use the secure copy to send files to, and from, the server. Log out and use the following command-line prompt to send a file to the server. `scp WhereAmI.java cs15lfa22al@ieng6.ucsd.edu:/home/linux/ieng6/cs15lfa22/cs15lfa22al/lab1` (Be sure to replace "al" with your account's initials! Be sure that WhereAmI.java is in the current path you are in on your local machine).
 
 **WhereAmI.java contents:**
 
@@ -49,7 +50,7 @@ _Note that scp is followed by the file to be copied, then the account info follo
 
    ![Image](Lab1-part6-CSE15L.png)
 
-5. We are ready to generate an ssh key. This will allow us to call `scp` or `ssh` without having to input the profile password each time.
+Step 5: We are ready to generate an ssh key. This will allow us to call `scp` or `ssh` without having to input the profile password each time.
 
     `ssh-keygen` will create a public and private key on your computer. Just press Enter when given the prompt below to send it to the *default* path. Press Enter two more times to ensure no password, and allow the decryption of the key to process authentication.
 
@@ -58,7 +59,7 @@ _Note that scp is followed by the file to be copied, then the account info follo
 
     ![Image](Lab1-part7-CSE15L.png)
 
-6. Now that we don't need a password to `ssh` or `scp` we can make things even easier by doing just about everything we have covered so far in a single terminal command, by delineating the commands with ";". 
+Step 6: Now that we don't need a password to `ssh` or `scp` we can make things even easier by doing just about everything we have covered so far in a single terminal command, by delineating the commands with ";". (Note that commands that will be run on the server are wrapped in quotation marks).
 
         For example, let's secure copy WhereAmI.java to the server, compile it, and run it, all in one command, and all from our local machine!
 
