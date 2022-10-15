@@ -7,7 +7,7 @@ This test produced a failure in the method:
 Here is the output of the test (symptoms)
 ![Image](/lab3_images/Lab3-p1-symptoms.png)
 
-And here is the bug, and a example of a solution:
+And here is the bug, and an example of a solution:
 ![Image](/lab3_images/Lab3-p1-bug.png)
 ![Image](/lab3_images/Lab3-p1-sln.png)
 
@@ -23,18 +23,8 @@ This test produced a failure in the method:
 Here is the output of the test (symptoms)
 ![Image](/lab3_images/Lab3-p2-symptoms.png)
 
-And here is the bug, and a example of a solution:
+And here is the bug, and an example of a solution:
 ![Image](/lab3_images/Lab3-p2-bug.png)
 ![Image](/lab3_images/Lab3-p2-sln.png)
 
-
-
-
-
-
-
-
-
-
-
-
+An OutOfMemoryError was triggered as a symptom. This was caused by the program entering an infinite loop. Any input outside of empty lists would have caused this, as the index2 was not being incremented as expected. This filled the computers memory until the program eventually crashed.
