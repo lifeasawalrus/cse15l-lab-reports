@@ -1,3 +1,78 @@
+# Simple Search Engine:
+```
+import java.net.URI;
+  import java.util.ArrayList;
+  
+  class Handler implements URLHandler {
+      String s;
+      ArrayList<String> library = new ArrayList<>();
+  
+      public String handleRequest(URI url) {
+          if (url.getPath().equals("/add")) {
+             String[] parameters = url.getQuery().split("=");
+             if (parameters[0].equals("s")) {
+                 library.add(parameters[1]);
+             }
+             String returns = "";
+             for (int i=0; i < library.size(); i++) {
+                 returns += " "+library.get(i);
+             }
+             return "Library:"+returns;
+          }
+          else if (url.getPath().equals("/search")) {
+             String[] parameters = url.getQuery().split("=");
+             if (parameters[0].equals("s")) {
+                 for (int i=0; i < library.size(); i++) {
+                     if (library.get(i).contains(parameters[1])) {
+                     return library.get(i);
+                     }
+                 }
+             }
+              return "Search failed!";
+          }
+          else {
+              return "404 Not Found!";
+          }
+      }
+  }
+  
+  class SearchEngine {
+      public static void main(String[] args) throws IOException {
+          if(args.length == 0){
+              System.out.println("Missing port number! Try any number between 1024 to   49151");
+              return;
+          }
+  s
+          int port = Integer.parseInt(args[0]);
+  
+          Server.start(port, new Handler());
+      }
+  }
+
+
+```
+Methods: handleRequest()
+Relevant arguments: parameter[1] = "/add", "juicy"
+relevant changes: adds juicy to an ArrayList.
+![Image](/lab3_images/Lab3-SE1.png)
+Methods: handleRequest()
+Relevant arguments: parameter[1] = "/add", "watermelon"
+relevant changes: adds watermelon to an ArrayList.
+![Image](/lab3_images/Lab3-SE2.png)
+Methods: handleRequest()
+Relevant arguments: parameter[1] = "/add", "watermelooooon", "watermelooooooooooooooooooon"
+relevant changes: adds watermelooooon and watermelooooooooooooooooooon to an ArrayList.
+![Image](/lab3_images/Lab3-SE3.png)
+Methods: handleRequest()
+Relevent arguments: parameter[1] = "/search", "water"
+Relevant arguments: "search" searches for all strings in the library that contain "water".
+![Image](/lab3_images/Lab3-SE4.png)
+
+
+
+
+
+
 # Problem 1:
 The first problem is the reverseInPlace() method.
 
