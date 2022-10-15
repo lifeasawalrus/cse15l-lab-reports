@@ -56,23 +56,31 @@ Methods: handleRequest()
 Relevant arguments: parameter[1] = "/add", "juicy"
 
 Relevant changes: adds juicy to an ArrayList.
+
 ![Image](/lab3_images/Lab3-SE1.png)
+
 Methods: handleRequest()
 
 Relevant arguments: parameter[1] = "/add", "watermelon"
 
 relevant changes: adds watermelon to an ArrayList.
+
 ![Image](/lab3_images/Lab3-SE2.png)
+
 Methods: handleRequest()
+
 Relevant arguments: parameter[1] = "/add", "watermelooooon", "watermelooooooooooooooooooon"
 
 Relevant changes: adds watermelooooon and watermelooooooooooooooooooon to an ArrayList.
+
 ![Image](/lab3_images/Lab3-SE3.png)
+
 Methods: handleRequest()
 
 Relevent arguments: parameter[1] = "/search", "water"
 
 Relevant arguments: "search" searches for all strings in the library that contain "water".
+
 ![Image](/lab3_images/Lab3-SE4.png)
 
 
