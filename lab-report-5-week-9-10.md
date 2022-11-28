@@ -41,14 +41,20 @@ Example3:
 
 ## Code Trace:
 Let's walk through what happened on example 2.
-The first command with output is line 7. This line 
-produces standard error output that simply gives feedback
+
+Line 4 sets a string parameter CP to the classpath that will be 
+used for this assignment.
+
+Line 6 recursively removes all files and data stored from the previous 
+grading instance (if available).
+
+Line 7 produces standard error output that simply gives feedback
 on the git clone process. All of this output is redirected 
 to a file called `trash.txt` in order to clean up the output
 printed to the screen. Return code zero.
 
-Next we have the first `if` statement. This line checks to 
-see if student's ListExamples.java file was submitted 
+Next we have the first `if` statement at line 9. This line checks 
+to see if student's ListExamples.java file was submitted 
 properly. In this case, it did not, so we enter line 10.
 
 The command at line 10 sends an error message through standard 
