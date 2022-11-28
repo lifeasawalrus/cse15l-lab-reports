@@ -32,11 +32,17 @@ grade.sh:
 ```
 
 Result:
+
 Example1:
+
 ![Image](/lab5-9_images/Lab_5_evidence_of_GradeServer1.png)
+
 Example2:
+
 ![Image](/lab5-9_images/Lab_5_evidence_of_GradeServer2.png)
+
 Example3:
+
 ![Image](/lab5-9_images/Lab_5_evidence_of_GradeServer3.png)
 
 ## Code Trace:
